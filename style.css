@@ -1,0 +1,8 @@
+.slidev-vclick-target {
+  transition: opacity 900ms ease, filter 900ms ease, transform 900ms ease;
+}
+.slidev-vclick-hidden {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(14px);
+}
