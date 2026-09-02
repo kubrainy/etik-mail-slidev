@@ -1,15 +1,12 @@
 <template>
   <div class="qr-stage">
-    <v-click>
-      <div class="qr-block">
+      <div class="qr-block" v-click="1">
         <img src="/qr-demo.png" class="qr-img" alt="Canlı sistem QR kodu" />
-        <div class="qr-label">Modeli hemen deneyin</div>
         <div class="qr-url">etikmail.kubrainy.me</div>
       </div>
-    </v-click>
   </div>
 
-  <div class="resources">
+  <div class="resources" v-click="1">
     <div class="resource-title">Kaynaklar</div>
     <div class="resource-item">Veri seti · huggingface.co/datasets/kubrainy/etik-mail-dataset</div>
     <div class="resource-item">Model · huggingface.co/kubrainy/etik-mail-toxic-model</div>

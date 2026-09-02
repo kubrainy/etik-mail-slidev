@@ -10,18 +10,18 @@
       </div>
     </div>
 
-    <div class="results-area" v-click="1">
+    <div class="metrics-area" v-click="1" v-click.hide="2">
       <div class="metrics-grid">
         <div class="metric-card">
-          <div class="metric-label">Accuracy</div>
+          <div class="metric-label">Doğruluk</div>
           <div class="metric-value">99.845%</div>
         </div>
         <div class="metric-card">
-          <div class="metric-label">Precision</div>
+          <div class="metric-label">Kesinlik</div>
           <div class="metric-value">100%</div>
         </div>
         <div class="metric-card">
-          <div class="metric-label">Recall</div>
+          <div class="metric-label">Duyarlılık</div>
           <div class="metric-value">99.690%</div>
         </div>
         <div class="metric-card">
@@ -30,43 +30,44 @@
         </div>
       </div>
       <div class="metrics-note">645 örnek</div>
+    </div>
 
-      <v-click>
-        <div class="matrix-wrap">
-          <table class="matrix">
-            <thead>
-              <tr>
-                <th></th>
-                <th colspan="2">Tahmin</th>
-              </tr>
-              <tr>
-                <th></th>
-                <th>Etik</th>
-                <th>Etik Dışı</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Gerçek Etik</th>
-                <td class="cell-ok">322</td>
-                <td class="cell-zero">0</td>
-              </tr>
-              <tr>
-                <th>Gerçek Etik Dışı</th>
-                <td class="cell-warn">1</td>
-                <td class="cell-ok">322</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </v-click>
+    <div class="matrix-area" v-click="2">
+      <div class="matrix-wrap">
+  <table class="matrix">
+    <thead>
+      <tr>
+        <th class="corner"></th>
+        <th class="corner"></th>
+        <th colspan="2">Tahmin</th>
+      </tr>
+      <tr>
+        <th class="corner"></th>
+        <th class="corner"></th>
+        <th>Etik</th>
+        <th>Etik Dışı</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th rowspan="2" class="matrix-side">Gerçek</th>
+        <th>Etik</th>
+        <td class="cell-ok">322</td>
+        <td class="cell-zero">0</td>
+      </tr>
+      <tr>
+        <th>Etik Dışı</th>
+        <td class="cell-warn">1</td>
+        <td class="cell-ok">322</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-      <v-click>
-        <div class="final-line">
-          Yalnızca <span class="highlight-warn">1 yanlış negatif</span> ·
-          <span class="highlight-ok">0 yanlış pozitif</span>
-        </div>
-      </v-click>
+      <div class="final-line" v-click="3">
+        Yalnızca <span class="highlight-warn">1 yanlış negatif</span> ·
+        <span class="highlight-ok">0 yanlış pozitif</span>
+      </div>
     </div>
   </div>
 </template>
@@ -125,14 +126,13 @@
   font-weight: 400;
 }
 
-.results-area {
+.metrics-area {
   position: absolute;
   inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2rem;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
 }
 
 .metrics-grid {
@@ -146,14 +146,14 @@
 }
 
 .metric-label {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   opacity: 0.6;
   font-weight: 600;
   letter-spacing: 0.05em;
 }
 
 .metric-value {
-  font-size: 2.4rem;
+  font-size: 2.9rem;
   font-weight: 800;
   color: #7c3aed;
   line-height: 1.1;
@@ -161,36 +161,47 @@
 
 .metrics-note {
   margin-top: 0.6rem;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   opacity: 0.5;
   font-style: italic;
 }
 
+.matrix-area {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .matrix-wrap {
-  margin-top: 1.6rem;
+  margin-top: 0;
 }
 
 .matrix {
   border-collapse: collapse;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
 }
 
 .matrix th, .matrix td {
-  padding: 0.45rem 1rem;
-  text-align: center;
+  padding: 0.6rem 1.4rem;
 }
 
 .matrix thead th {
   font-weight: 700;
   opacity: 0.7;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 
 .matrix tbody th {
   font-weight: 700;
   opacity: 0.75;
   text-align: right;
-  padding-right: 1rem;
+  padding-right: 1.2rem;
 }
 
 .cell-ok {
@@ -214,10 +225,12 @@
 
 .final-line {
   margin-top: 1.4rem;
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   font-weight: 700;
 }
 
 .highlight-warn { color: #dc2626; }
 .highlight-ok { color: #059669; }
 </style>
+
+
