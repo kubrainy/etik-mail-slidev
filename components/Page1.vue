@@ -1,54 +1,81 @@
 <template>
-  <div class="email-quote">
-    "Bu raporu hâlâ göndermemiş olmanız gerçekten kabul edilebilir değil.
-    Bundan sonra tekrar hatırlatmak zorunda kalmayacağımı umuyorum."
-  </div>
-
-  <div class="mt-8 text-xl opacity-70">
-    Hakaret yok. Küfür yok.
-  </div>
-
-  <div class="text-2xl font-bold mt-2">
-    Peki etik mi?
-  </div>
-
-  <v-click>
-    <div class="tags mt-10">
-      <span class="tag">Pasif-agresif</span>
-      <span class="tag">Baskılayıcı</span>
-      <span class="tag">Küçümseyici</span>
+  <div class="slide-wrap">
+    <div class="email-quote">
+      "Sanırım herkes gibi sen de son teslim tarihini kaçırdın.
+      Tabii senden zaten fazlasını beklemiyordum.<br><br>
+      Bu iş sende olmasa belki ekip daha hızlı ilerlerdi."
     </div>
-  </v-click>
 
+    <div class="subtext">
+      Hakaret yok. Küfür yok.
+    </div>
+
+    <div class="question">
+      Peki etik mi?
+    </div>
+
+    <div class="tags-slot">
+      <v-click>
+        <div class="tags">
+          <span class="topic-tag">Pasif-agresif</span>
+          <span class="topic-tag">Baskılayıcı</span>
+          <span class="topic-tag">Küçümseyici</span>
+        </div>
+      </v-click>
+    </div>
+  </div>
 </template>
 
 <style scoped>
+.slide-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
 .email-quote {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-style: italic;
   max-width: 780px;
-  margin: 1rem auto 0;
-  padding: 1.8rem 2.2rem;
+  padding: 1.4rem 2rem;
   border-left: 4px solid #7c3aed;
   background: rgba(124, 58, 237, 0.07);
   border-radius: 8px;
-  line-height: 1.55;
+  line-height: 1.5;
+}
+.subtext {
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+.question {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.tags-slot {
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 .tags {
   display: flex;
-  gap: 1rem;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
 }
-.tag {
-  padding: 0.6rem 1.4rem;
+.topic-tag {
+  position: static;
+  display: inline-flex;
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
   border-radius: 14px;
   background: rgba(124, 58, 237, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(124, 58, 237, 0.3);
   color: #7c3aed;
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
 }
 </style>

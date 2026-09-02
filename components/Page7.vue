@@ -7,28 +7,30 @@
     <div class="tech-row"><span>Optimizer</span><span>AdamW</span></div>
   </div>
 
-  <div class="columns">
-    <v-click>
-      <div class="col">
-        <div class="node">Türkçe</div>
-        <div class="arrow">↓</div>
-        <div class="node node-model">BERTürk</div>
-        <div class="arrow">↓</div>
-        <div class="node">Bağlamsal Temsil</div>
-      </div>
-    </v-click>
+  <div class="stage">
+    <div class="hero-model">BERTürk</div>
+    <div class="hero-line" />
 
-    <div class="col-divider" />
-
-    <v-click>
-      <div class="col">
-        <div class="node">Önceden Eğitilmiş</div>
-        <div class="arrow">↓</div>
-        <div class="node node-model">Fine-tuning</div>
-        <div class="arrow">↓</div>
-        <div class="node node-final">Etik / Etik Dışı</div>
+    <div class="branches" v-click="1">
+      <div class="branch">
+        <div class="branch-icon">🇹🇷</div>
+        <div class="branch-label">Türkçe için önceden eğitilmiş BERT modeli</div>
       </div>
-    </v-click>
+      <div class="branch">
+        <div class="branch-icon">🎯</div>
+        <div class="branch-label">Etik / etik dışı sınıflandırma için <b>fine-tune</b> edildi</div>
+      </div>
+    </div>
+
+    <div class="contrast" v-click="2">
+      <div class="contrast-item contrast-dim">
+        <s>Sadece belirli kelimeleri arama</s>
+      </div>
+      <div class="contrast-arrow">→</div>
+      <div class="contrast-item contrast-highlight">
+        Metni <b>bağlamsal</b> olarak değerlendirebilme
+      </div>
+    </div>
   </div>
 </template>
 
@@ -61,55 +63,93 @@
   padding: 0.1rem 0;
 }
 
-.columns {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  margin-top: 2.5rem;
-}
-
-.col {
+.stage {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2.5rem;
+  gap: 0;
 }
 
-.col-divider {
+.hero-model {
+  padding: 0.9rem 2.6rem;
+  border-radius: 12px;
+  background: #7c3aed;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.hero-line {
   width: 1px;
-  height: 180px;
-  background: rgba(120, 120, 120, 0.2);
+  height: 28px;
+  background: rgba(124, 58, 237, 0.4);
 }
 
-.node {
-  padding: 0.7rem 1.8rem;
-  border-radius: 10px;
+.branches {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 0.4rem;
+}
+
+.branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 240px;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
   background: rgba(124, 58, 237, 0.06);
-  border: 1px solid rgba(124, 58, 237, 0.2);
-  font-size: 1.05rem;
-  font-weight: 600;
-  min-width: 220px;
+  border: 1px solid rgba(124, 58, 237, 0.22);
   text-align: center;
 }
 
-.node-model {
-  background: rgba(124, 58, 237, 0.14);
-  border-color: rgba(124, 58, 237, 0.45);
-  color: #7c3aed;
-  font-size: 1.2rem;
-  font-weight: 800;
+.branch-icon {
+  font-size: 1.4rem;
 }
 
-.node-final {
-  background: #7c3aed;
-  border-color: #7c3aed;
-  color: white;
-}
-
-.arrow {
-  font-size: 1.2rem;
-  color: #7c3aed;
-  opacity: 0.5;
+.branch-label {
+  font-size: 0.98rem;
   line-height: 1.4;
+  opacity: 0.85;
+}
+
+.branch-label b {
+  color: #7c3aed;
+  opacity: 1;
+}
+
+.contrast {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 2.2rem;
+  padding: 1rem 1.6rem;
+  border-radius: 14px;
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.contrast-item {
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.contrast-dim {
+  opacity: 0.4;
+  font-weight: 400;
+}
+
+.contrast-arrow {
+  font-size: 1.2rem;
+  color: #7c3aed;
+  opacity: 0.6;
+}
+
+.contrast-highlight {
+  color: #7c3aed;
 }
 </style>

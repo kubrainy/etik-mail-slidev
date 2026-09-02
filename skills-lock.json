@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "slidev": {
+      "source": "antfu/skills",
+      "sourceType": "github",
+      "skillPath": "skills/slidev/SKILL.md",
+      "computedHash": "949d94a83134759f3e9dd7ffc41ade2d1e03eb69706322f0467cda73705e47ce"
+    }
+  }
+}
