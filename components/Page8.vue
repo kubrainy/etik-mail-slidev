@@ -79,7 +79,6 @@
   margin-top: 1rem;
 }
 
-
 .stage-area :deep(.slidev-vclick-hidden) {
   transition-duration: 0s !important;
 }

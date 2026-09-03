@@ -162,7 +162,7 @@ setine aktarmadık.
 kurumsal bağlama uygunluğu, doğal ve gerçekçi olması, anlamsal
 tutarlılığı ve daha önce kullanılan bir örnekle birebir aynı olmaması
 kontrol edildi. Sonrasında tüm örnekler yine araştırmacılar tarafından etik
-veya etik dışı olarak etiketlendi.
+veya etik dışı olarak etiketlendi. 
 
 [click] Dolayısıyla model, BDM'nin verdiği etikete doğrudan eğitilmedi.
 Üretim ile kabul arasında her zaman bir insan denetimi katmanı vardı.
