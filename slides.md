@@ -20,9 +20,6 @@ bölümünden mezunum. Bugün sizlere Türkçe kurumsal e-postalarda etik dış�
 kullanımının yapay zekâ ile otomatik olarak tespit edilmesine yönelik
 gerçekleştirdiğimiz çalışmayı sunacağım.
 
-Sağdaki örnek e-postada gördüğünüz gibi; pasif-agresif, küçümseyici ve
-baskılayıcı ifadeler kurumsal iletişimde sıkça karşımıza çıkabiliyor.
-Çalışmamız tam olarak bu tür örüntüleri otomatik tespit etmeyi hedefliyor.
 -->
 
 ---
@@ -45,7 +42,7 @@ Fakat kurumsal iletişimde problem her zaman bu kadar açık değil.
 Örneğin bu mailde doğrudan bir hakaret bulunmuyor. Ancak kullanılan dil
 baskılayıcı ve pasif-agresif ifadeler barındırıyor.
 
-[click] Pasif-agresif, baskılayıcı, küçümseyici ifadeler çoğu zaman doğrudan hakaret içermesede karşı tarafta rahatsızlık hissi oluşturabilir.
+[click] Bu ifadeler çoğu zaman doğrudan hakaret içermesede karşı tarafta rahatsızlık hissi oluşturabilir.
 Dolayısıyla problem yalnızca kötü kelimeleri tespit etmek değil;
 asıl mesele iletişim biçimini ve bağlamı anlayabilmek.
 -->
@@ -96,10 +93,8 @@ odaklanıyor.
 
 [click] Bize en yakın çalışma ise Enron e-posta veri seti üzerinde
 yapılanlar. Orada da kurumsal iletişim ile etik arasındaki ilişkiye
-bakılıyor: "Şirket yöneticileri, şirket kötü şeyler yaparken
-e-postalarında nasıl konuşuyordu?" sorusuna odaklanılıyor. Fakat bu
-çalışmalar iletişimi doğrudan "etik / etik değil" şeklinde ayrıştırmıyor;
-daha çok güven, şeffaflık ve kontrol gibi kavramlar üzerinden dolaylı bir
+bakılıyor. Fakat fark şu mailleri etik mi değil mi diye ayırmak yerine "Şirket yöneticileri, şirket kötü şeyler yaparken
+e-postalarında nasıl konuşuyordu?" sorusuna odaklanılıyor. Daha çok güven, şeffaflık ve kontrol gibi kavramlar üzerinden dolaylı bir
 analiz yapıyor. Yani "Bu iletişim davranışı nasıl algılanıyor?" sorusu
 hâlâ açık kalıyor.
 
@@ -141,7 +136,7 @@ class: text-center
 
 [click] Toplam 3.222 benzersiz Türkçe kurumsal iletişim metni
 oluşturduk ve bunları etik ve etik dışı olmak üzere iki sınıfa
-ayırdık. Dengeli bir dağılım oluşturulmasına özen gösterildi.
+ayırdık. Dengeli bir dağılım oluşturulmasına özen gösterdik.
 
 [click] Etik dışı örneklerde hiyerarşik baskı, küçümseyici ifadeler,
 pasif-agresif söylemler, tehditkâr dil ve mobbing niteliği taşıyan
@@ -189,7 +184,7 @@ Model tarafında ise BERTürk'ü tercih ettik.
 çalışmamızda kurumsal iletişim metinlerinin etik veya etik dışı olarak
 sınıflandırılması için fine-tune edilmiştir.
 
-click] BERTürk'ü tercih etmemizdeki önemli noktalardan biri, modelin yalnızca belirli kelimeleri
+[click] BERTürk'ü tercih etmemizdeki önemli noktalardan biri, modelin yalnızca belirli kelimeleri
 aramak yerine metni bağlama göre değerlendirebilmesidir.
 -->
 
@@ -258,7 +253,6 @@ davrandığını da gördük.
 ---
 layout: center
 class: text-center
-clicks: 5
 ---
 
 ## Örnek Etik Dışı Mail
@@ -266,12 +260,18 @@ clicks: 5
 <br>
 <br>
 
+
 <Page10 />
 
+<!--
+Konuşmanın başındaki maile geri dönelim. Malimizde baskılayıcı ve küçümseyici 
+ifadelerin olduğunu konuşmuştuk. Gelin bu maili birlikte bizim web arayüzümüzde test edelim. 
+-->
 
 ---
 layout: center
 class: text-center
+clicks: 5
 ---
 
 
@@ -292,10 +292,7 @@ düzenlemesi için geri bildirim veriyor.
 
 -->
 
-<!--
-Konuşmanın başındaki maile geri dönelim. Malimizde baskılayıcı ve küçümseyici 
-ifadelerin olduğunu konuşmuştuk. Gelin bu maili birlikte bizim web arayüzümüzde test edelim. 
--->
+
 
 
 ---
