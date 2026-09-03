@@ -109,6 +109,8 @@ class: text-center
 
 ## Biz Ne Yaptık?
 
+<br>
+
 <Page4 />
 
 <!--
@@ -184,8 +186,9 @@ Model tarafında ise BERTürk'ü tercih ettik.
 çalışmamızda kurumsal iletişim metinlerinin etik veya etik dışı olarak
 sınıflandırılması için fine-tune edilmiştir.
 
-[click] BERTürk'ü tercih etmemizdeki önemli noktalardan biri, modelin yalnızca belirli kelimeleri
-aramak yerine metni bağlama göre değerlendirebilmesidir.
+BERTürk'ü tercih etmemizdeki önemli noktalardan biri, modelin yalnızca
+belirli kelimeleri aramak yerine metni bağlama göre
+değerlendirebilmesidir.
 -->
 
 ---
