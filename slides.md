@@ -337,8 +337,6 @@ layout: center
 class: text-center
 ---
 
-## Modeli Deneyin
-
 <Page13 />
 
 <!--
