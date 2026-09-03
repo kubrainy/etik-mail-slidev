@@ -5,7 +5,6 @@ import { useSlideContext } from '@slidev/client'
 const { $clicks } = useSlideContext()
 const clicks = computed(() => Math.min($clicks?.value ?? 0, 3))
 
-// scene is a fixed 940 x 340 box; every coordinate below is in that space
 const SRC = {
   claude: { x: 46, y: 62 },
   gpt: { x: 46, y: 196 },
@@ -20,8 +19,8 @@ const mails = [
   { id: 6, from: 'gpt' },
 ].map((m, k) => {
   const s = SRC[m.from]
-  const hub = { x: 400 + (k % 2 ? 7 : -7), y: 96 + k * 11 }  // held bundle in the reviewer's hands
-  const ds = { x: 812, y: 70 + k * 30 }                      // slot inside the dataset box
+  const hub = { x: 400 + (k % 2 ? 7 : -7), y: 96 + k * 11 }  
+  const ds = { x: 812, y: 70 + k * 30 }                      
   return {
     ...m,
     k,
@@ -50,7 +49,6 @@ const captions = [
     <div class="scene" :class="`phase-${clicks}`">
       <div class="track" />
 
-      <!-- SOURCES -->
       <div class="src src-claude">
         <div class="emblem">
           <svg viewBox="0 0 24 24" class="mk">
@@ -73,7 +71,6 @@ const captions = [
         <div class="src-name">ChatGPT</div>
       </div>
 
-      <!-- HUMAN REVIEWER -->
       <div class="human">
         <div class="human-label">İnsan İncelemesi</div>
         <div class="human-fig">
@@ -83,7 +80,6 @@ const captions = [
         <div class="human-sub">doğallık · bağlam · tekrar · etiketleme</div>
       </div>
 
-      <!-- DATASET -->
       <div class="dataset">
         <div class="ds-box">
           <div class="ds-fill" />
@@ -99,7 +95,6 @@ const captions = [
         <div class="ds-sub">hazır küme</div>
       </div>
 
-      <!-- FLYING MAIL -->
       <div class="mail-layer">
         <div
           v-for="m in mails"
@@ -137,7 +132,6 @@ const captions = [
   flex-shrink: 0;
 }
 
-/* dashed left-to-right pipeline hint */
 .track {
   position: absolute;
   left: 130px;
@@ -147,7 +141,6 @@ const captions = [
   z-index: 0;
 }
 
-/* ---------- sources ---------- */
 .src {
   position: absolute;
   left: 0;
@@ -186,7 +179,7 @@ const captions = [
 .phase-1 .src { transform: translateY(-2px); }
 .phase-1 .src .emblem { animation: pulse 1.4s ease-in-out infinite; }
 
-/* ---------- human ---------- */
+
 .human {
   position: absolute;
   left: 290px;
@@ -231,7 +224,6 @@ const captions = [
 .phase-1 .lens,
 .phase-2 .lens { opacity: 1; animation: scan 1.6s ease-in-out infinite; }
 
-/* ---------- dataset ---------- */
 .dataset {
   position: absolute;
   right: 0;
@@ -321,7 +313,6 @@ const captions = [
   transition: height 1.3s ease 0.35s;
 }
 
-/* ---------- flying mail ---------- */
 .mail-layer {
   position: absolute;
   inset: 0;
@@ -362,7 +353,6 @@ const captions = [
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* phase 1: fly up out of the emblem, then across to the reviewer */
 .phase-1 .mail,
 .phase-2 .mail,
 .phase-3 .mail { opacity: 1; }
@@ -372,7 +362,6 @@ const captions = [
   animation-delay: calc(var(--i) * 0.14s);
 }
 
-/* phase 2: held in the reviewer's hands, stamped as checked */
 .phase-2 .mail {
   transform: translate(var(--hx), var(--hy)) scale(1);
   transition: transform 0.35s ease;
@@ -384,7 +373,6 @@ const captions = [
   transition-delay: calc(var(--i) * 0.12s + 0.15s);
 }
 
-/* phase 3: approved samples drop into the dataset */
 .phase-3 .mail {
   animation: toDataset 0.95s cubic-bezier(0.4, 0, 0.25, 1) both;
   animation-delay: calc(var(--i) * 0.1s);
@@ -409,7 +397,6 @@ const captions = [
   50% { transform: scale(1.06); box-shadow: 0 14px 30px rgba(0, 0, 0, 0.26); }
 }
 
-/* ---------- caption ---------- */
 .caption {
   padding: 0.7rem 1.6rem;
   border-radius: 999px;

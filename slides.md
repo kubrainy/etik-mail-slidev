@@ -83,20 +83,27 @@ class: text-center
 <Page3 />
 
 <!--
-Literatürü incelediğimizde burada iki farklı eğilim görüyoruz.
+Literatürü incelediğimizde burada üç farklı eğilim görüyoruz.
 
-Bir tarafta sosyal medya ve çevrim içi platformlarda toksik, saldırgan
-ve hakaret içeren dilin tespitine yönelik çalışmalar var.
+Sosyal medya tarafında toksik, saldırgan ve hakaret içeren dilin
+tespitine yönelik çalışmalar var. Buradaki temel soru "Bu dil zararlı
+mı?" oluyor.
 
 Diğer tarafta kurumsal e-postalar üzerinde NLP çalışmaları bulunuyor;
-ancak bunların önemli bir bölümü dolandırıcılık, phishing veya insider
-threat gibi güvenlik problemlerine odaklanıyor.
+ancak bunların önemli bir bölümü dolandırıcılık, phishing, spam veya
+insider threat gibi güvenlik ve içerik sınıflandırma problemlerine
+odaklanıyor.
 
-[click] Bizim çalışmamız ise bu ikisinin arasında kalan, ancak doğrudan
-hedeflenmemiş bir probleme odaklanıyor: kurum içerisindeki gündelik
-etik dışı iletişim.
+[click] Bize en yakın çalışma ise Enron e-posta veri seti üzerinde
+yapılanlar. Orada da kurumsal iletişim ile etik arasındaki ilişkiye
+bakılıyor: "Şirket yöneticileri, şirket kötü şeyler yaparken
+e-postalarında nasıl konuşuyordu?" sorusuna odaklanılıyor. Fakat bu
+çalışmalar iletişimi doğrudan "etik / etik değil" şeklinde ayrıştırmıyor;
+daha çok güven, şeffaflık ve kontrol gibi kavramlar üzerinden dolaylı bir
+analiz yapıyor. Yani "Bu iletişim davranışı nasıl algılanıyor?" sorusu
+hâlâ açık kalıyor.
 
-[click] Yani bizim sorumuz "Bu e-posta dolandırıcılık mı?" değil;
+[click] Bizim sorumuz "Bu e-posta dolandırıcılık mı?" değil;
 "Bu e-posta çalışanlar arası etik iletişime uygun mu?"
 -->
 
@@ -189,6 +196,7 @@ aramak yerine metni bağlama göre değerlendirebilmesidir.
 ---
 layout: center
 class: text-center
+clicks: 3
 ---
 
 ## Eğitim → Değerlendirme
@@ -250,20 +258,28 @@ davrandığını da gördük.
 ---
 layout: center
 class: text-center
+clicks: 5
 ---
-
 
 ## Örnek Etik Dışı Mail
 
+<br>
+<br>
 
 <Page10 />
 
-<!--
-Çalışmayı yalnızca bir sınıflandırma modeli olarak bırakmadık.
 
-Modeli bir e-posta istemcisi prototipine entegre ettik. Sistem
-FastAPI tabanlı bir backend ile e-posta istemcisi arasında bağlantı
-kuruyor.
+---
+layout: center
+class: text-center
+---
+
+
+<Page11 />
+
+<!--
+Sistemimiz FastAPI tabanlı bir backend ile e-posta istemcisi arasında
+bağlantı kuruyor.
 
 [click] Kullanıcı gönder butonuna bastığında mesaj metin temizleme,
 tokenizasyon ve çıkarım adımlarından geçerek analiz ediliyor.
@@ -274,17 +290,13 @@ tokenizasyon ve çıkarım adımlarından geçerek analiz ediliyor.
 [click] sistem gönderimi durduruyor ve kullanıcıya mesajını
 düzenlemesi için geri bildirim veriyor.
 
-(Şimdi gerçek sistemden canlı bir demo göstereceğim — 45-60 saniye
-sürecek. Önce etik bir mesaj: "Toplantı notlarını müsait olduğunuzda
-paylaşabilir misiniz?" → gönderilebilir. Sonra etik dışı bir mesaj:
-"Bu raporu hâlâ göndermemiş olmanız kabul edilebilir değil..." →
-gönderim engellenir.)
 -->
 
----
-layout: iframe
-url: https://etikmail.kubrainy.me/
----
+<!--
+Konuşmanın başındaki maile geri dönelim. Malimizde baskılayıcı ve küçümseyici 
+ifadelerin olduğunu konuşmuştuk. Gelin bu maili birlikte bizim web arayüzümüzde test edelim. 
+-->
+
 
 ---
 layout: center

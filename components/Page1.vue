@@ -1,9 +1,31 @@
+<script setup>
+import { useSlideContext } from '@slidev/client'
+const { $clicks: clicks } = useSlideContext()
+</script>
+
 <template>
   <div class="slide-wrap">
-    <div class="email-quote">
-      "Sanırım herkes gibi sen de son teslim tarihini kaçırdın.
-      Tabii senden zaten fazlasını beklemiyordum.<br><br>
-      Bu iş sende olmasa belki ekip daha hızlı ilerlerdi."
+    <div class="email-card">
+      <div class="email-header">
+        <div class="email-dot"></div>
+        <div class="email-dot"></div>
+        <div class="email-dot"></div>
+        <span class="ml-2 opacity-50 text-xs">Gelen Kutusu</span>
+      </div>
+      <div class="email-body">
+        <p class="mb-2 opacity-60 text-xs">Konu: Dosya Teslimi</p>
+        <p>
+          Merhaba,<br><br>
+          Dosyayı yeniden gönderdim.
+          <span class="flag" :class="{ 'flag--on': clicks >= 1 }">Umarım bu kez gözden kaçmaz</span>
+          ve
+          <span class="flag" :class="{ 'flag--on': clicks >= 2 }">süreci tekrar hatırlatmak zorunda kalmam.</span><br><br>
+          İyi çalışmalar.
+        </p>
+      </div>
+
+      <div v-click="1" class="tag tag-1">⚠ Pasif-agresif</div>
+      <div v-click="2" class="tag tag-2">⚠ Baskılayıcı</div>
     </div>
 
     <div class="subtext">
@@ -13,16 +35,6 @@
     <div class="question">
       Peki etik mi?
     </div>
-
-    <div class="tags-slot">
-      <v-click>
-        <div class="tags">
-          <span class="topic-tag">Pasif-agresif</span>
-          <span class="topic-tag">Baskılayıcı</span>
-          <span class="topic-tag">Küçümseyici</span>
-        </div>
-      </v-click>
-    </div>
   </div>
 </template>
 
@@ -31,17 +43,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-}
-.email-quote {
-  font-size: 1.3rem;
-  font-style: italic;
-  max-width: 780px;
-  padding: 1.4rem 2rem;
-  border-left: 4px solid #7c3aed;
-  background: rgba(124, 58, 237, 0.07);
-  border-radius: 8px;
-  line-height: 1.5;
+  gap: 1.4rem;
 }
 .subtext {
   font-size: 1.1rem;
@@ -51,31 +53,64 @@
   font-size: 1.4rem;
   font-weight: 700;
 }
-.tags-slot {
-  min-height: 3rem;
+.email-card {
+  position: relative;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  font-size: 0.8rem;
+  color: #333;
+  text-align: left;
+}
+.email-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
+  gap: 6px;
+  padding: 8px 12px;
+  background: #f3f3f3;
+  border-bottom: 1px solid #e5e5e5;
 }
-.tags {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 0.75rem;
-  justify-content: center;
-  align-items: center;
+.email-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #ddd;
 }
-.topic-tag {
-  position: static;
-  display: inline-flex;
-  white-space: nowrap;
-  padding: 0.5rem 1rem;
-  border-radius: 14px;
-  background: rgba(124, 58, 237, 0.1);
-  border: 1px solid rgba(124, 58, 237, 0.3);
-  color: #7c3aed;
+.email-dot:nth-child(1) { background: #ff5f57; }
+.email-dot:nth-child(2) { background: #febc2e; }
+.email-dot:nth-child(3) { background: #28c840; }
+.email-body {
+  padding: 16px 18px;
+  line-height: 1.7;
+}
+.flag {
+  padding: 1px 4px;
+  border-radius: 4px;
+  transition: all 0.4s ease;
+}
+.flag--on {
+  background: rgba(239, 68, 68, 0.15);
+  color: #dc2626;
   font-weight: 600;
-  font-size: 0.95rem;
+  box-shadow: 0 0 0 1px rgba(239,68,68,0.3);
+}
+.tag {
+  position: absolute;
+  right: -64px;
+  white-space: nowrap;
+  background: #dc2626;
+  color: white;
+  font-size: 0.7rem;
+  padding: 3px 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(220,38,38,0.4);
+  animation: pop 0.35s ease;
+}
+.tag-1 { top: 96px; }
+.tag-2 { top: 140px; }
+@keyframes pop {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 </style>
