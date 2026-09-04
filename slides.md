@@ -199,7 +199,7 @@ class: text-center
 clicks: 3
 ---
 
-## Eğitim → Değerlendirme
+## Eğitim + Doğrulama → Performans Değerlendirmesi
 
 <Page8 />
 
@@ -216,13 +216,14 @@ değerlendiren F1 skorunu esas aldık.
 Sonuçlara baktığımızda modelimiz değerlendirme kümesinde
 yüzde 99,84 doğruluk ve yüzde 99,845 F1 skoruna ulaştı. 
 
-[click] Modelin sınıf bazlı tahmin davranışının incelenmesi için oluşturduğumuz 
-Karmaşıklık matrisine baktığımızda 322 etik örneğin tamamının
+[click] Modelin hangi sınıflarda nasıl tahmin yaptığını daha ayrıntılı görmek için 
+karmaşıklık matrisini oluşturduk.
+Matrise baktığımızda 322 etik örneğin tamamının
 doğru sınıflandırıldığını görüyoruz. 323 etik dışı örneğin ise 322'si
 doğru sınıflandırılırken yalnızca bir örnek etik olarak tahmin edilmiş.
 
-[click] Yani bu değerlendirme kümesinde yalnızca bir yanlış negatifimiz
-var ve hiç yanlış pozitifimiz yok.
+[click] Yani modelimiz bu değerlendirme kümesinde 645 örneğin 644'ünü doğru sınıflandırmış 
+ve yalnızca 1 örnekte hata yapmıştır.
 
 (Bu cümleden sonra bir saniye durun.)
 -->
@@ -296,8 +297,6 @@ tokenizasyon ve çıkarım adımlarından geçerek analiz ediliyor.
 düzenlemesi için geri bildirim veriyor.
 
 -->
-
-
 
 
 ---

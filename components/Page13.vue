@@ -1,6 +1,6 @@
 <template>
   <div class="qr-wrap">
-    <div class="qr-stage" v-click="1">
+    <div class="qr-stage">
       <div class="qr-block">
         <div class="qr-heading">
           <span class="qr-kicker">QR KODU TARAYIN</span>
@@ -20,7 +20,7 @@
       </div>
     </div>
 
-    <div class="resources" v-click="1">
+    <div class="resources">
       <div class="resource-title">Kaynaklar</div>
       <div class="resource-item">Veri seti · huggingface.co/datasets/kubrainy/etik-mail-dataset</div>
       <div class="resource-item">Model · huggingface.co/kubrainy/etik-mail-toxic-model</div>

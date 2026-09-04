@@ -10,7 +10,7 @@
       </div>
     </div>
 
-    <div class="metrics-area" v-click="1" v-click.hide="2">
+    <div class="metrics-area" v-click="[1, 2]">
       <div class="metrics-grid">
         <div class="metric-card">
           <div class="metric-label">Doğruluk</div>
