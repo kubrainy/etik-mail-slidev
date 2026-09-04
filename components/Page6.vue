@@ -68,7 +68,7 @@ const captions = [
             <circle cx="12" cy="12" r="2.4" fill="#fff" />
           </svg>
         </div>
-        <div class="src-name">ChatGPT</div>
+        <div class="src-name">GPT</div>
       </div>
 
       <div class="human">

@@ -29,7 +29,7 @@
     <div class="model-qr">
       <img src="/model-qr.png" alt="Modeli incelemek için QR kodu" />
       <span class="model-qr-text">
-        <span class="model-qr-label">Modeli incele</span>
+        <span class="model-qr-label">Eğitilmiş Veri Seti Modelini İncele</span>
       </span>
     </div>
   </div>
