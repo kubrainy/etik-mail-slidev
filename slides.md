@@ -96,12 +96,9 @@ Biz bu noktada farklı bir soru soruyoruz:
 “Bu e-posta toksik mi?” de değil.
 Bizim sorumuz: “Bu e-posta, çalışanlar arasındaki etik kurumsal iletişime uygun mu?”**
 
-Bu nedenle çalışmamızda yalnızca zararlı veya tehdit içeren ifadeleri tespit etmek yerine; **küçümseme, tehdit, manipülasyon, baskı, ayrımcı ifade, saygısızlık ve benzeri etik dışı iletişim davranışlarını kurumsal iletişim bağlamında ele alıyoruz.**
-
 Literatürde Türkçe kurumsal e-postalar üzerinde bu problemi doğrudan ele alan hazır ve yeterli bir veri setinin bulunmaması nedeniyle de veri setimizi kendimiz oluşturduk. Veri setimizde etik ve etik dışı iletişim örneklerini dengeli şekilde oluşturduk ve her bir örneği insan gözetiminden geçirerek veri setine dahil ettik.
 
 [click] Böylece çalışmamızın amacı yalnızca **“e-postayı sınıflandırmak”** değil; yapay zekâ kullanarak **kurumsal iletişimde etik dışı dilin otomatik olarak tespit edilebilmesine yönelik bir temel oluşturmaktır.**
-
 -->
 
 ---
