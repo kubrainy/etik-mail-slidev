@@ -80,26 +80,28 @@ class: text-center
 <Page3 />
 
 <!--
-Literatürü incelediğimizde burada üç farklı eğilim görüyoruz.
+Literatürü incelediğimizde, e-posta ve dijital iletişim alanındaki çalışmaların genel olarak üç farklı eğilim etrafında toplandığını görüyoruz.
 
-Sosyal medya tarafında toksik, saldırgan ve hakaret içeren dilin
-tespitine yönelik çalışmalar var. Buradaki temel soru "Bu dil zararlı
-mı?" oluyor.
+İlk eğilim, özellikle sosyal medya platformlarında toksik, saldırgan, hakaret içeren veya nefret söylemi barındıran ifadelerin tespitine yönelik çalışmalar. Bu çalışmalarda temel soru genellikle **“Bu dil zararlı mı?”** şeklinde karşımıza çıkıyor. Yani iletişimin toksik olup olmadığı, saldırganlık düzeyi veya nefret söylemi içerip içermediği sınıflandırılmaya çalışılıyor.
 
-Diğer tarafta kurumsal e-postalar üzerinde NLP çalışmaları bulunuyor;
-ancak bunların önemli bir bölümü dolandırıcılık, phishing, spam veya
-insider threat gibi güvenlik ve içerik sınıflandırma problemlerine
-odaklanıyor.
+İkinci eğilim ise kurumsal e-postalar üzerinde gerçekleştirilen NLP ve makine öğrenmesi çalışmaları. Burada e-postalar; spam, phishing, dolandırıcılık, insider threat ve benzeri güvenlik problemlerinin tespiti için analiz ediliyor. Dolayısıyla temel odak, iletişimin **güvenli olup olmadığı veya bir tehdit içerip içermediği** üzerine kuruluyor.
 
-[click] Bize en yakın çalışma ise Enron e-posta veri seti üzerinde
-yapılanlar. Orada da kurumsal iletişim ile etik arasındaki ilişkiye
-bakılıyor. Fakat fark şu mailleri etik mi değil mi diye ayırmak yerine "Şirket yöneticileri, şirket kötü şeyler yaparken
-e-postalarında nasıl konuşuyordu?" sorusuna odaklanılıyor. Daha çok güven, şeffaflık ve kontrol gibi kavramlar üzerinden dolaylı bir
-analiz yapıyor. Yani "Bu iletişim davranışı nasıl algılanıyor?" sorusu
-hâlâ açık kalıyor.
+[click] Üçüncü ve bizim çalışmamıza en yakın alan ise **Enron e-posta veri seti üzerinden gerçekleştirilen çalışmalar**. Bu çalışmalarda kurumsal iletişim ile etik arasındaki ilişkiyi farklı açılardan inceleniyor. Ancak burada amaç, e-postaları doğrudan **“etik” veya “etik dışı”** şeklinde sınıflandırmak değil. Daha çok şirket içerisindeki iletişim biçimlerinden hareketle yöneticilerin davranışları, güven, şeffaflık, kontrol ve kurumsal ilişkiler gibi kavramlar dolaylı olarak analiz ediliyor. Örneğin temel soru, şirket içerisinde etik açıdan problemli durumlar yaşanırken yöneticilerin e-posta iletişimlerinde nasıl bir dil kullandığı şeklinde ele alınıyor.
 
-[click] Bizim sorumuz "Bu e-posta dolandırıcılık mı?" değil;
-"Bu e-posta çalışanlar arası etik iletişime uygun mu?"
+Dolayısıyla literatürde önemli bir boşluk ortaya çıkıyor: **Bir e-postanın güvenlik açısından tehdit oluşturup oluşturmadığını veya toksik olup olmadığını tespit etmeye yönelik çalışmalar bulunmasına rağmen, kurumsal iletişim bağlamında kullanılan dilin etik iletişim ilkelerine uygun olup olmadığını doğrudan sınıflandıran çalışmalar oldukça sınırlı.**
+
+Biz bu noktada farklı bir soru soruyoruz:
+
+[click] **“Bu e-posta dolandırıcılık mı?” değil.
+“Bu e-posta toksik mi?” de değil.
+Bizim sorumuz: “Bu e-posta, çalışanlar arasındaki etik kurumsal iletişime uygun mu?”**
+
+Bu nedenle çalışmamızda yalnızca zararlı veya tehdit içeren ifadeleri tespit etmek yerine; **küçümseme, tehdit, manipülasyon, baskı, ayrımcı ifade, saygısızlık ve benzeri etik dışı iletişim davranışlarını kurumsal iletişim bağlamında ele alıyoruz.**
+
+Literatürde Türkçe kurumsal e-postalar üzerinde bu problemi doğrudan ele alan hazır ve yeterli bir veri setinin bulunmaması nedeniyle de veri setimizi kendimiz oluşturduk. Veri setimizde etik ve etik dışı iletişim örneklerini dengeli şekilde oluşturduk ve her bir örneği insan gözetiminden geçirerek veri setine dahil ettik.
+
+[click] Böylece çalışmamızın amacı yalnızca **“e-postayı sınıflandırmak”** değil; yapay zekâ kullanarak **kurumsal iletişimde etik dışı dilin otomatik olarak tespit edilebilmesine yönelik bir temel oluşturmaktır.**
+
 -->
 
 ---

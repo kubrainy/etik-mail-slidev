@@ -32,8 +32,10 @@
   <div class="punchline-slot">
     <v-click>
       <div class="punchline">
-        Yani bizim sorumuz <s class="dim">"Bu e-posta dolandırıcılık mı?"</s> değil;<br>
-        <span class="highlight">"Bu e-posta çalışanlar arası etik iletişime uygun mu?"</span>
+        <s class="dim">"Bu e-posta dolandırıcılık mı?"</s> değil.<br>
+        <s class="dim">"Bu e-posta toksik mi?"</s> de değil.<br>
+        Bizim sorumuz:
+        <span class="highlight">"Bu e-posta, çalışanlar arasındaki etik kurumsal iletişime uygun mu?"</span>
       </div>
     </v-click>
   </div>
