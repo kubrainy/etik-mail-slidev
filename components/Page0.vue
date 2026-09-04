@@ -12,12 +12,13 @@
     <div class="intro-authors">
       <strong>Kübra Çetinkaya</strong> · Sezi Güngörmüş · Şerif Ali Sadık
     </div>
+    <img src="/dpu-logo.png" alt="Kütahya Dumlupınar Üniversitesi logosu" class="intro-logo" />
     <div class="intro-affil">Kütahya Dumlupınar Üniversitesi</div>
   </div>
-
   <div class="eyebrow">IDAP'26 · 2026</div>
 </div>
 </template>
+
 <style scoped>
 .intro {
   display: flex;
@@ -29,8 +30,15 @@
   max-width: 1100px;
   margin: 0 auto;
 }
+.intro-logo {
+  display: block;
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  margin: 0.8rem auto;
+}
 .eyebrow {
-  margin-top: 1.5rem;
+  margin-top: 0;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.25em;
@@ -68,6 +76,6 @@
 .intro-affil {
   font-size: 0.95rem;
   opacity: 0.55;
-  margin-top: 0.3rem;
+  margin-top: 0;
 }
 </style>

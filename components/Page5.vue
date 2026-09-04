@@ -11,7 +11,7 @@
           <span class="class-num">1</span> Etik
         </div>
         <div class="class-box class-unethical">
-          <span class="class-num">2</span> Etik Dışı
+          <span class="class-num">0</span> Etik Dışı
         </div>
       </div>
     </v-click>
