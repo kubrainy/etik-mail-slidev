@@ -24,7 +24,7 @@
       <div class="resource-title">Kaynaklar</div>
       <div class="resource-item">Veri seti · huggingface.co/datasets/kubrainy/etik-mail-dataset</div>
       <div class="resource-item">Model · huggingface.co/kubrainy/etik-mail-toxic-model</div>
-      <div class="resource-item">Kod · github.com/kubrainy/etikmail</div>
+      <div class="resource-item">Kod · github.com/kubrainy/etik-mail</div>
     </div>
   </div>
 </template>
